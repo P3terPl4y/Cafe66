@@ -25,10 +25,10 @@
             0 100%,         /* inferior izquierda */
             100% 100%,      /* inferior derecha */
             100% 0          /* superior derecha */
-        );        
-        border-bottom: 6px double #000000;
-        border-top: 1px groove #665632;
-        border-left:1px groove #665632;
+        );        border-bottom: 6px double #000000;
+        border-top: 1px groove #c5a765;
+        border-left:1px groove #c5a765;
+    box-shadow:-1px -6px 6px 10px #815e1069;
     }
    .b-servilleta{
     background-color: rgba(197, 170, 134, 0.514);
@@ -60,4 +60,24 @@
          /* ★ BORDE VISIBLE en el contorno recortado (drop-shadow) */
     
    }
-   
+   img{
+    display: flex;
+    height:60vh;
+     width:auto;
+    margin: auto;
+    background-attachment: fixed;
+   }
+   .card-img {
+    /* Estilos similares a header para borde y sombra */
+    background: url("../assets/timmycoffe.jpeg"); /* fondo neutro para el borde */
+    background-attachment: fixed;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position-x: right;
+     background-position-y: center;
+     width: 70%;
+     height: 70vh;
+     margin: auto;
+    position: relative;
+  }
+  
