@@ -57,7 +57,6 @@
         border-left:1% groove #c5a765 ; 
         filter: drop-shadow(-1px -6px 6px #815e1069) drop-shadow(0 0 0 10px #815e1069);
         position: relative;
-        min-width: 50vw;
         margin: auto;
       }
   
@@ -87,6 +86,7 @@
   
       /* Capa interior (overlay) con clip-path ligeramente diferente */
       .card-servilleta2 {
+        max-width: 80vw;
         background:white; /* overlay oscuro como en el original */
         padding: 2rem 1.8rem;
         clip-path: polygon(
@@ -111,10 +111,11 @@
       /* Estilos internos de la card (títulos, párrafos) */
       .card-servilleta2 h3 {
         font-family:cursive;
-        font-style: italic;
+        font-style:oblique;
         font-size: 1.8rem;
         color: #1d140a;
         margin-bottom: 0.5rem;
+        text-align: center;
       }
   
       .card-servilleta2 p {
