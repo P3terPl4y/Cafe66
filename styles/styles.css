@@ -62,22 +62,25 @@
    }
    img{
     display: flex;
-    height:60vh;
+    height:50vh;
      width:auto;
     margin: auto;
     background-attachment: fixed;
+    border-radius: 50%;
+
    }
    .card-img {
     /* Estilos similares a header para borde y sombra */
-    background: url("../assets/timmycoffe.jpeg"); /* fondo neutro para el borde */
-    background-attachment: fixed;
-     background-size: cover;
+    background: url("../assets/marco.jpeg"); /* fondo neutro para el borde */
      background-repeat: no-repeat;
      background-position-x: right;
      background-position-y: center;
-     width: 70%;
-     height: 70vh;
+     width: auto;
+     height: 50vh;
      margin: auto;
     position: relative;
+    border: 6px double black;
+    border-radius: 50%;
+    margin-bottom: 4vh;
   }
   
