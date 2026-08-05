@@ -1,0 +1,297 @@
+.container {
+    width: 100vw;
+    justify-content: center;
+    max-width: 95%;
+    margin: auto;
+}
+
+/* ── TÍTULO PRINCIPAL (estilo cine) ── */
+.hero-title {
+    text-align: center;
+    margin: 1rem 0 3rem 0;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 4.5rem;
+    letter-spacing: 4px;
+    color: #110a06;
+  
+    transform: rotate(-0.5deg);
+    transition: transform 0.3s ease;
+}
+
+.hero-title:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.hero-title small {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 8px;
+    color: #7a4a2e;
+    margin-top: -0.6rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* ── COMPONENTES ── */
+
+/* ── CARDS CON PLIEGUE (adaptadas del header) ── */
+
+    /* Cada card es un contenedor que tendrá la estructura de servilleta */
+    .card-wrapper {
+        /* Estilos similares a header para borde y sombra */
+        background: #fffcf4; /* fondo neutro para el borde */
+        clip-path: polygon(
+            0 0,
+            23.5% 0%,            /* origen (esquina superior izquierda) */
+            0 23.5%,          /* punto vertical donde empieza el doblez */
+            0 100%,         /* inferior izquierda */
+            100% 100%,      /* inferior derecha */
+            100% 0          /* superior derecha */
+        ); 
+        border-top: 1% groove #c5a765;
+        border-left:1% groove #c5a765 ; 
+        box-shadow: -1px -6px 6px 10px #815e1069;
+        position: relative;
+      }
+  
+      .card-wrapper:hover {
+        box-shadow: -1px -6px 6px 10px #815e1069, 0 20px 30px -10px rgba(0,0,0,0.3);
+      }
+  
+      /* Capa exterior de la servilleta (fondo de imagen) */
+      .card-servilleta {
+        background-size: cover;
+        background-position: center;
+        background-color: rgba(197, 170, 134, 0.514); /* por si la imagen no carga */
+        position: relative;
+        clip-path: polygon(
+          0 0,
+          24% 0%,
+          15% 15%,
+          0 24%,
+          0 100%,
+          100% 100%,
+          100% 0
+        );
+        /* min-height para que tenga tamaño */
+        min-height: 280px;
+      }
+  
+      /* Capa interior (overlay) con clip-path ligeramente diferente */
+      .card-servilleta2 {
+        background:white; /* overlay oscuro como en el original */
+        padding: 2rem 1.8rem;
+        clip-path: polygon(
+          0 0,
+          24% 0%,
+          16% 18%,
+          0 24%,
+          0 100%,
+          100% 100%,
+          100% 0
+        );
+        backdrop-filter: blur(2px);
+        border: 1px solid rgba(200, 150, 100, 0.2);
+        /* para que el contenido se vea bien */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 280px;
+      }
+  
+      /* Estilos internos de la card (títulos, párrafos) */
+      .card-servilleta2 h3 {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-size: 1.8rem;
+        color: #1d140a;
+        margin-bottom: 0.5rem;
+      }
+  
+      .card-servilleta2 p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.2rem;
+        color: #1a1005;
+      }
+  
+      .card-servilleta2 .btn-fuerte {
+        align-self: flex-start;
+      }
+  
+      /* Para cards de cestería, podemos usar un overlay similar */
+      .card-cesteria .card-servilleta2 {
+        background: rgba(30, 18, 10, 0.6);
+      }
+
+/* Los botones ya están definidos, no tocar */
+.card-madera .btn-fuerte {
+    align-self: flex-start;
+}
+
+/* Botón con color fuerte (rojo vino) */
+.btn-fuerte {
+    display: inline-block;
+    background: #3d8613;
+    /* rojo intenso */
+    color: #f5ede4;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 40px 8px 40px 8px;
+    box-shadow: 0 8px 0 #254a10, 0 6px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn-fuerte:hover {
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 #4a1010, 0 10px 25px rgba(0, 0, 0, 0.4);
+    background: #a52424;
+}
+
+.btn-fuerte.mostaza {
+    background: #ad8213;
+    box-shadow: 0 8px 0 #6b4f0a;
+}
+
+.btn-fuerte.mostaza:hover {
+    background: #cc9a1a;
+    box-shadow: 0 4px 0 #6b4f0a;
+}
+
+
+/* ── GRID DE COMPONENTES ── */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+/* ── BARRA DE NAVEGACIÓN RÚSTICA ── */
+.nav-rustica {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    background: #ffffff;
+    border-radius: 60px 10px 60px 10px;
+    margin-bottom: 2rem;
+}
+
+.nav-rustica a {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    color: #2c1e14;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    padding: 0.4rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s, color 0.3s;
+    
+}
+
+.nav-rustica a:hover {
+    border-bottom-color: #8b1e1e;
+    color: #8b1e1e;
+}
+
+.nav-rustica .logo {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.8rem;
+    color: #7a4a2e;
+}
+
+/* ── CITAS (testimonio) ── */
+.blockquote-madera {
+    background-size: cover;
+    background-position: center;
+    border-radius: 60px 8px 60px 8px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    border: 3px solid #6b4c3a;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    color: #f5ede4;
+}
+
+.blockquote-madera .quote-overlay {
+    background: rgba(20, 12, 6, 0.55);
+    padding: 2rem;
+    border-radius: 40px 4px 40px 4px;
+    backdrop-filter: blur(2px);
+    border-left: 6px solid #b8860b;
+}
+
+.blockquote-madera blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.blockquote-madera cite {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #d4a373;
+}
+
+/* ── PIE DE PÁGINA ── */
+.footer-rustico {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-top: 6px double #000000;
+    text-align: center;
+    color: #2c1e14;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+}
+
+.footer-rustico span {
+    background: #b8860b;
+    color: #fff;
+    padding: 0.2rem 1.2rem;
+    border-radius: 40px 4px 40px 4px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+/* ── UTILIDADES ── */
+.text-center {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.w-full {
+    width: 100%;
+}

@@ -1,0 +1,63 @@
+     /* ── RESET Y BASE ── */
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-image: url("../assets/madera0.jpeg");
+        /* fondo blanco */
+        font-family: 'Courier New', Courier, monospace;
+        color: #000000;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    header {
+        margin-top: 2%;
+        background: #fffcf4;
+        position: relative;
+        clip-path: polygon(
+            0 0,
+            24.5% 0%,            /* origen (esquina superior izquierda) */
+            0 17.5%,          /* punto vertical donde empieza el doblez */
+            0 100%,         /* inferior izquierda */
+            100% 100%,      /* inferior derecha */
+            100% 0          /* superior derecha */
+        );        
+        border-bottom: 6px double #000000;
+        border-top: 1px groove #665632;
+        border-left:1px groove #665632;
+    }
+   .b-servilleta{
+    background-color: rgba(197, 170, 134, 0.514);
+        position: relative;
+        clip-path: polygon(
+            0 0,
+            24% 0%,            /* origen (esquina superior izquierda) */
+            10% 20%,          /* punto horizontal donde empieza el doblez */
+            0 24%,          /* punto vertical donde empieza el doblez */
+            0 100%,         /* inferior izquierda */
+            100% 100%,      /* inferior derecha */
+            100% 0          /* superior derecha */
+        );
+         /* ★ BORDE VISIBLE en el contorno recortado (drop-shadow) */
+    
+   }
+   .b-servilleta2{
+    background-color: white;
+        padding-top: 30vh;
+        clip-path: polygon(
+            0 0,
+            25% 0%,            /* origen (esquina superior izquierda) */
+            10% 35%,          /* punto horizontal donde empieza el doblez */
+            0 25%,          /* punto vertical donde empieza el doblez */
+            0 100%,         /* inferior izquierda */
+            100% 100%,      /* inferior derecha */
+            100% 0          /* superior derecha */
+        );
+         /* ★ BORDE VISIBLE en el contorno recortado (drop-shadow) */
+    
+   }
+   
