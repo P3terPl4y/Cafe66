@@ -44,93 +44,52 @@
     /* Cada card es un contenedor que tendrá la estructura de servilleta */
     .card-wrapper {
         /* Estilos similares a header para borde y sombra */
-        background: #fffcf4; /* fondo neutro para el borde */
-        clip-path: polygon(
-            0 0,
-            23.5% 0%,            /* origen (esquina superior izquierda) */
-            0 23.5%,          /* punto vertical donde empieza el doblez */
-            0 100%,         /* inferior izquierda */
-            100% 100%,      /* inferior derecha */
-            100% 0          /* superior derecha */
-        ); 
+        background: url("../assets/g89.svg"); /* fondo neutro para el borde */
+         background-repeat: no-repeat;
+         background-size: cover;
+         width: 30%;
+         height: 50vh;
         border-top: 1% groove #c5a765;
         border-left:1% groove #c5a765 ; 
-        filter: drop-shadow(-1px -6px 6px #815e1069) drop-shadow(0 0 0 10px #815e1069);
         position: relative;
         margin: auto;
+        justify-content: center;
+        align-content: center;
       }
   
-      .card-wrapper:hover {
-        box-shadow: -1px -6px 6px 10px #815e1069, 0 20px 30px -10px rgba(0,0,0,0.3);
-      }
+      
   
       /* Capa exterior de la servilleta (fondo de imagen) */
-      .card-servilleta {
-        background-size: cover;
-        background-position: center;
-        background-color: rgba(197, 170, 134, 0.514); /* por si la imagen no carga */
-        position: relative;
-        clip-path: polygon(
-          0 0,
-          24% 0%,
-          15% 15%,
-          0 24%,
-          0 100%,
-          100% 100%,
-          100% 0
-        );
-        /* min-height para que tenga tamaño */
-        min-height: 280px;
-  
-      }
-  
-      /* Capa interior (overlay) con clip-path ligeramente diferente */
-      .card-servilleta2 {
-        max-width: 80vw;
-        background:white; /* overlay oscuro como en el original */
-        padding: 2rem 1.8rem;
-        clip-path: polygon(
-          0 0,
-          24% 0%,
-          16% 18%,
-          0 24%,
-          0 100%,
-          100% 100%,
-          100% 0
-        );
-        backdrop-filter: blur(2px);
-        border: 1px solid rgba(200, 150, 100, 0.2);
-        /* para que el contenido se vea bien */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 280px;
-  
-      }
+      
   
       /* Estilos internos de la card (títulos, párrafos) */
-      .card-servilleta2 h3 {
+      .card-wrapper h3 {
         font-family:cursive;
         font-style:oblique;
         font-size: 1.8rem;
+        width: 50%;
         color: #1d140a;
         margin-bottom: 0.5rem;
+        display: flex;
+        margin: auto;
+        justify-content: center;
         text-align: center;
+        position: relative;
       }
   
-      .card-servilleta2 p {
+      .card-wrapper p {
         font-size: 1rem;
         line-height: 1.6;
         margin-bottom: 1.2rem;
         color: #1a1005;
       }
   
-      .card-servilleta2 .btn-fuerte {
+      .card-wrapper .btn-fuerte {
         align-self: flex-start;
       }
   
       /* Para cards de cestería, podemos usar un overlay similar */
-      .card-cesteria .card-servilleta2 {
+      .card-cesteria .card-wrapper {
         background: rgba(30, 18, 10, 0.6);
       }
 
