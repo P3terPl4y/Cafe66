@@ -174,8 +174,14 @@ background-repeat: no-repeat;
     gap: 2rem;
     margin:auto;
     margin-top: 20vh;
+    opacity: 1;
+    transform: translateX(90%); /* o 100% para que venga de fuera */
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.8s ease;
 }
-
+.grid-3.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
 /* ── BARRA DE NAVEGACIÓN RÚSTICA ── */
 .nav-rustica {
     display: flex;
