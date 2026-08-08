@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="46.152962mm"
-   height="42.994526mm"
-   viewBox="0 0 46.152962 42.994526"
+   width="68.304558mm"
+   height="43.218681mm"
+   viewBox="0 0 68.304558 43.218681"
    version="1.1"
    id="svg1"
    sodipodi:docname="hoja_de_papel.svg"
@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="429.74415"
-     inkscape:cy="390.49972"
+     inkscape:zoom="2"
+     inkscape:cx="444.5"
+     inkscape:cy="342.75"
      inkscape:window-width="1366"
      inkscape:window-height="742"
      inkscape:window-x="0"
@@ -37,8 +37,8 @@
     <inkscape:page
        x="0"
        y="0"
-       width="46.152962"
-       height="42.994526"
+       width="68.304558"
+       height="43.218681"
        id="page2"
        margin="0"
        bleed="0" />
@@ -49,23 +49,23 @@
      inkscape:label="Capa 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-92.036565,-91.884657)">
+     transform="translate(-87.471346,-82.064115)">
     <path
-       d="m 137.91377,91.917684 -40.279744,0.196089 c 0.05871,0.05414 -0.644563,1.440639 -2.467878,4.505118 -1.194154,2.007037 -3.052679,4.308589 -3.052679,4.308589 v 0 c 0,0 0.07863,-0.01 0,0 v 0 0 c 0.47032,-0.73594 0,0 0,0 l 5.520875,-8.732372 v 0 l 0.161203,7.513534 -5.682078,1.218838 0.16152,33.63854 45.881481,0.28009 z"
-       style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0657389"
        id="path1"
-       sodipodi:nodetypes="ccsssccccccccccc"
-       inkscape:export-filename="../Desktop/TimmyCoffe/assets/g89.svg"
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:0.0657389"
+       d="m 155.63236,82.453882 -65.285117,-0.356723 -0.112258,2.978676 -2.73068,0.486924 -8.4e-5,39.274581 68.238729,0.41238 z"
+       sodipodi:nodetypes="ccccccc"
+       inkscape:export-filename="../Desktop/Cafe66/assets/g89.svg"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <path
-       d="m 97.795547,99.708691 -0.161203,-7.51354 v 0 l -2.760438,4.36618 -2.760437,4.366179 v 0 c 0,0 0.02958,1.9925 0,0 0.02958,1.99249 1.69e-4,-0.0108 0,0 z"
-       style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#f4eed7;stroke-width:0.0260132"
+       d="m 90.234985,85.075838 0.112258,-2.978676 v 0 l -2.842938,3.4656 v 0 0 c 0,0 0.0089,0.706522 0,0 0.0089,0.70652 5e-5,-0.0038 0,0 z"
+       style="fill:#999999;fill-opacity:1;fill-rule:evenodd;stroke:#f4eed7;stroke-width:0.00847593"
        id="path131"
        sodipodi:nodetypes="ccccccccc" />
     <path
-       d="m 92.113469,100.92751 v 0 l 4.876982,-2.811149 0.643575,-6.00256 v 0 c -0.134154,0.17838 -5.520557,8.813709 -5.520557,8.813709 z"
-       style="fill:#f2f2f2;fill-rule:evenodd;stroke:#fff6d5;stroke-width:0.0200258"
+       d="m 87.504299,85.562762 v 0 l 2.492857,-1.147942 0.350161,-2.451163 v 0 c -0.07299,0.07284 -2.843018,3.599105 -2.843018,3.599105 z"
+       style="fill:#f2f2f2;fill-rule:evenodd;stroke:#fff6d5;stroke-width:0.00943937"
        id="path132"
        sodipodi:nodetypes="cccccc" />
   </g>

@@ -45,18 +45,15 @@
     .card-wrapper {
         /* Estilos similares a header para borde y sombra */
         background: url("../assets/g89.svg"); /* fondo neutro para el borde */
-         background-repeat: no-repeat;
-         background-size: cover;
-         width: 30%;
-         height: 50vh;
+        background-repeat: no-repeat;
+background-size:cover ;
         border-top: 1% groove #c5a765;
         border-left:1% groove #c5a765 ; 
-        position: relative;
-        margin: auto;
         justify-content: center;
-        align-content: center;
-      }
-  
+        display: flex;
+        min-width: 20vw;
+    }
+    
       
   
       /* Capa exterior de la servilleta (fondo de imagen) */
@@ -66,15 +63,20 @@
       .card-wrapper h3 {
         font-family:cursive;
         font-style:oblique;
-        font-size: 1.8rem;
-        width: 50%;
+        font-size: 1.4rem;
         color: #1d140a;
         margin-bottom: 0.5rem;
         display: flex;
-        margin: auto;
+        padding-left: 3vw;
+        padding-top: 7vh;
+        padding-bottom: 5vh;
+        padding-right: 3vw;
         justify-content: center;
-        text-align: center;
+        text-align: start;
+        margin: auto;
+        text-align: left;
         position: relative;
+        max-width: 50;
       }
   
       .card-wrapper p {
@@ -134,33 +136,57 @@
     box-shadow: 0 4px 0 #6b4f0a;
 }
 
+.grid-2{
+    border: 0.9vw hidden;
+    border-radius: 60%;
+    border-color: #979517;
+    background-color: rgba(0, 0, 0, 0.863);
+    background-image: url("../assets/timmycoffe.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 /* ── GRID DE COMPONENTES ── */
-.grid-2 {
+.grid-2 img{
+    background-origin: content-box;
+background-position: center;
+background-origin: inherit;
+background-repeat: no-repeat;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin: 3rem 0;
+    margin: auto;
+    background-attachment: fixed;
+    margin-top: 2vh;
+    justify-content: center;
+    min-width: 30vw;
+    height: 50vh;
+    border: 2vw double rgb(0, 0, 0);
+    border: 0.7vw double;
+    border-color: #080808;
 }
 
 .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     gap: 2rem;
-    margin: 3rem 0;
+    margin:auto;
+    margin-top: 20vh;
 }
 
 /* ── BARRA DE NAVEGACIÓN RÚSTICA ── */
 .nav-rustica {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     padding: 1rem 2rem;
     background: #ffffff;
     border-radius: 60px 10px 60px 10px;
-    margin-bottom: 2rem;
+    margin-bottom: 2vw;
+    width: 90vw;
 }
 
 .nav-rustica a {
