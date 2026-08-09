@@ -6,7 +6,8 @@
     }
     
     body {
-        background-image: url("../assets/madera0.jpeg");
+        background-image: url("../assets/roble3.jpeg");
+        background-attachment:fixed;
         /* fondo blanco */
         font-family: 'Courier New', Courier, monospace;
         color: #000000;
@@ -17,8 +18,6 @@
     header {
         margin-top: 2%;
         position: relative;
-        border-top: 1px groove #c5a765;
-        border-left:1px groove #c5a765;
         width: 90vw;
         margin: auto;
         height: 90vh;
@@ -30,4 +29,5 @@ img{
     margin: auto;
     margin-top: 5vw;
     margin-bottom: 0.20vw;
+
 }

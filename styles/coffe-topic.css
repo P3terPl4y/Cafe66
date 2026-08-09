@@ -136,19 +136,10 @@ background-size:cover ;
     box-shadow: 0 4px 0 #6b4f0a;
 }
 
-.grid-2{
-    border: 0.9vw hidden;
-    border-radius: 60%;
-    border-color: #979517;
-    background-color: rgba(0, 0, 0, 0.863);
-    background-image: url("../assets/timmycoffe.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 
 /* ── GRID DE COMPONENTES ── */
 .grid-2 img{
+    box-shadow: 2vw 2vw 4vw 0.1vw black;
     background-origin: content-box;
 background-position: center;
 background-origin: inherit;
@@ -163,8 +154,10 @@ background-repeat: no-repeat;
     min-width: 30vw;
     height: 50vh;
     border: 2vw double rgb(0, 0, 0);
-    border: 0.7vw double;
-    border-color: #080808;
+    border: 1vw ridge;
+    background: url("../assets/roble-oscuro.jpeg");
+    background-size: contain;
+
 }
 
 .grid-3 {
@@ -183,25 +176,27 @@ background-repeat: no-repeat;
     transform: translateX(0);
 }
 /* ── BARRA DE NAVEGACIÓN RÚSTICA ── */
-.nav-rustica {
+.nav-rustica{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 1rem 2rem;
-    background: #ffffff;
-    border-radius: 60px 10px 60px 10px;
+    align-items: start;
+    gap: 1rem;
+    background: url("../assets/g89.svg") no-repeat;
+    background-size: cover;
     margin-bottom: 2vw;
-    width: 90vw;
 }
 
 .nav-rustica a {
+    display: flex;
     font-family: 'Cinzel', serif;
     font-weight: 600;
-    color: #2c1e14;
+    color: #000000;
     text-decoration: none;
     letter-spacing: 2px;
-    font-size: 1rem;
+    font-size: 4vw;
+    width: 30%;
+    margin: auto;
+    position: relative;
+justify-content: center;
     padding: 0.4rem 0;
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s, color 0.3s;
@@ -209,8 +204,8 @@ background-repeat: no-repeat;
 }
 
 .nav-rustica a:hover {
-    border-bottom-color: #8b1e1e;
-    color: #8b1e1e;
+    border-bottom-color: #538b1e;
+    color: #538b1e;
 }
 
 .nav-rustica .logo {
@@ -268,7 +263,8 @@ background-repeat: no-repeat;
 
 .footer-rustico span {
     background: #b8860b;
-    color: #fff;
+    background: url("../assets/g89.svg") no-repeat;
+    color: #000000;
     padding: 0.2rem 1.2rem;
     border-radius: 40px 4px 40px 4px;
     display: inline-block;
