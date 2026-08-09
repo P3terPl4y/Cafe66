@@ -8,6 +8,8 @@
     body {
         background-image: url("../assets/roble3.jpeg");
         background-attachment:fixed;
+        border: 1vw double;
+        border-color: rgb(0, 0, 0);
         /* fondo blanco */
         font-family: 'Courier New', Courier, monospace;
         color: #000000;
