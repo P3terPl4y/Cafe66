@@ -5,10 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caffe66</title>
-    <!-- Fuentes elegantes 
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Cinzel:wght@600&family=Inter:wght@400;600&display=swap"
-        rel="stylesheet" />-->
+        rel="stylesheet" />
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/coffe-topic.css">
     <style>
@@ -36,66 +35,133 @@
 </head>
 
 <body>
+    <!-- CAPA DE FONDO (fija) -->
+    <div id="bg-layer"></div>
+
     <div class="container">
 
-        <!-- ========== 1. TÍTULO PRINCIPAL (Timmi Coffe) ========== -->
+        <!-- ========== HEADER ========== -->
         <header>
-            <div class="b-servilleta">
-                <div class="b-servilleta2">
-                    <img src="assets/logo.svg" alt="">
-                </div>
-            </div>
-            <!-- ========== 2. BARRA DE NAVEGACIÓN ========== -->
+            <img src="assets/logo.svg" alt="Logo Caffe66" class="imagen-real" />
             <nav class="nav-rustica">
+                <span class="logo">✦</span>
                 <a href="#">Inicio</a>
                 <a href="#">Cafés</a>
                 <a href="#">Contacto</a>
+                <span style="font-size:1.4rem;">☕</span>
             </nav>
         </header>
 
-        <!-- ========== 3. COMPONENTES (CARDS) ========== -->
+        <!-- ========== SECCIÓN HERO (imagen + texto) ========== -->
 
 
-    </div>
-    <!-- Grid 3 -->
+        <!-- ========== SECCIÓN DE PASOS (proceso del café) ========== -->
+        <div class="historia-container">
+            <div class="frase-destacada">
+                <div class="card-wrapper">
+                    <h3>✦ El viaje del cafe</h3>
+                </div>
+            </div>
 
+            <div class="paso">
+                <div class="paso-imagen">
+                    <img src="assets/dsc.jpeg" alt="Origen" />
+                </div>
+                <div class="paso-texto">
+                    <h3>Origen</h3>
+                    <p>Nuestros granos provienen de las mejores fincas de altura, seleccionados a mano para garantizar
+                        la excelencia.</p>
+                    <span class="paso-etiqueta">↳ Tierra</span>
+                </div>
+            </div>
 
-    <div class="grid-3">
-        <!-- Card Roble -->
-        <div class="grid-2">
-            <img src="assets/itasa-de-cafe.svg" alt="">
+            <div class="paso paso-reverse">
+                <div class="paso-texto">
+                    <h3>Tostado</h3>
+                    <p>El tueste artesanal resalta las notas únicas de cada variedad, con un control preciso de
+                        temperatura y tiempo.</p>
+                    <span class="paso-etiqueta">↳ Fuego</span>
+                </div>
+                <div class="paso-imagen">
+                    <img src="assets/cafe-tipos.jpeg" alt="Tostado" />
+                </div>
+            </div>
+
+            <div class="paso">
+                <div class="paso-imagen">
+                    <img src="assets/tasa-de-cafe.jpeg" alt="Taza" />
+                </div>
+                <div class="paso-texto">
+                    <h3>La taza</h3>
+                    <p>El momento final, donde todos los cuidados se unen en una experiencia sensorial inolvidable.</p>
+                    <span class="paso-etiqueta">↳ Momento</span>
+                </div>
+            </div>
         </div>
-        <div class="card-wrapper">
 
-            <h3>✦ Un lugar donde el tiempo se detiene para que disfrutes de el mejor cafe
-            </h3>
+        <!-- ========== FRASE DESTACADA ========== -->
+        <div class="frase-destacada">
+            <div class="card-wrapper">
+                <h3>“El café es el aroma de la tierra, el abrazo del fuego y el susurro del tiempo.”</h3>
+            </div>
         </div>
-    </div>
 
-    <div class="grid-3">
-        <!-- Card Roble -->
-        <div class="grid-2">
-            <img src="assets/cafe66_noche.svg" alt="">
+        <!-- ========== SECCIÓN HISTORIA (alternando imagen y texto) ========== -->
+        <div class="seccion-historia reverse">
+            <div class="imagen-contenedor">
+                <img src="assets/cafe66_noche.svg" alt="Historia" class="imagen-real" />
+            </div>
+            <div class="card-wrapper2">
+                <h3>✦ Nuestra historia</h3>
+                <p>Más de 20 años de tradición familiar, perfeccionando el arte del café y creando un espacio donde la
+                    comunidad se encuentra.</p>
+            </div>
         </div>
-        <div class="card-wrapper">
 
-            <h3>✦ Un lugar donde el tiempo se detiene para que disfrutes de el mejor cafe
-            </h3>
+        <div class="seccion-historia">
+
+            <div class="imagen-contenedor">
+                <img src="assets/49821139624778058.jpeg" alt="Taza de café" class="imagen-real" />
+            </div>
+            <div class="card-wrapper2">
+                <h3>✦ Filosofía</h3>
+                <p>Creemos en el café como un ritual: cada taza es una pausa, un momento de conexión y un pequeño viaje
+                    a los orígenes.</p>
+            </div>
         </div>
-    </div>
-    <!-- ========== 4. TARJETA CON FONDO DE MADERA Y BOTÓN ========== -->
 
-    <!-- ========== 5. BLOQUE DE CITAS ========== -->
+        <!-- ========== SECCIÓN DOS IMÁGENES ========== -->
+        <div class="frase-destacada">
+            <div class="card-wrapper">
+                <h3>✦ Lo que ofrecemos</h3>
+            </div>
+        </div>
+        <div class="seccion-dos-imagenes">
+            <div class="imagen-contenedor">
+                <img src="assets/WhatsApp Image 2026-08-01 at 4.54.01 PM.jpeg" alt="Interior 1" class="imagen-real" />
+            </div>
+            <div class="imagen-contenedor">
+                <img src="assets/WhatsApp Image 2026-08-06 at 12.33.41 PM.jpeg" alt="Interior 2" class="imagen-real" />
+            </div>
+        </div>
+        <div class="frase-destacada">
+            <div class="card-wrapper">
+                <h3>✦ Nuestros clientes dicen</h3>
+            </div>
+        </div>
+        <!-- ========== CITAS (testimonio) ========== -->
+        <div class="blockquote-madera" style="background-image: url('assets/roble-oscuro.jpeg');">
+            <div class="quote-overlay">
+                <blockquote>“Un lugar donde el tiempo se detiene y el café sabe a hogar.”</blockquote>
+                <cite>— Cliente habitual</cite>
+            </div>
+        </div>
 
-
-    <!-- ========== 6. OTROS COMPONENTES (grid de 3) ========== -->
-
-
-    <!-- ========== 7. PIE DE PÁGINA ========== -->
-    <footer class="footer-rustico">
-        <span>✦ Hecho con capiteria artesanal ✦</span><br />
-        © 2026 Timmi Coffe · Todos los derechos reservados
-    </footer>
+        <!-- ========== FOOTER ========== -->
+        <footer class="footer-rustico">
+            <span>✦ Hecho con capiteria artesanal ✦</span><br />
+            © 2026 Timmi Coffe · Todos los derechos reservados
+        </footer>
 
     </div>
     <script src="scripts/scripts.js"></script>
