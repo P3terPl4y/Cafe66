@@ -278,6 +278,16 @@ header {
     margin-bottom: 0.5rem;
     letter-spacing: 2px;
 }
+/* ─── SECCIÓN HISTORIA (pasos) ─── */
+.historia-container { max-width: 1100px; margin: 0 auto; }
+.historia-titulo {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
 .paso {
     display: flex;
     flex-wrap: wrap;
@@ -291,6 +301,7 @@ header {
 }
 .paso:hover { transform: scale(1.01); }
 .paso-reverse { flex-direction: row-reverse; }
+/* ─── PASO: IMAGEN ─── */
 .paso-imagen {
     flex: 1 1 300px;
     min-width: 200px;
@@ -300,6 +311,7 @@ header {
     overflow: hidden;
     background: transparent !important;
 }
+
 .paso-imagen img {
     width: 100%;
     height: auto;
@@ -307,18 +319,20 @@ header {
     transition: transform var(--transition-smooth), filter var(--transition-smooth);
     filter: sepia(0.2) contrast(0.95);
 }
+
 .paso:hover .paso-imagen img {
     transform: scale(1.03);
     filter: sepia(0);
 }
+/* ─── TEXTO (mantiene su tamaño) ─── */
 .paso-texto {
     flex: 1 1 300px;
     min-width: 200px;
     background: var(--color-bg-card);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    background: url("../assets/g89.svg") no-repeat ;
-    background-size: cover;    padding: 2rem;
+    border-radius: var(--border-radius-md);
+    padding: 2rem;
     border: 1px solid var(--color-border);
     box-shadow: 0 8px 25px var(--color-shadow);
     transition: transform var(--transition-ease), box-shadow var(--transition-ease), background var(--transition-ease);
@@ -700,4 +714,37 @@ header {
     text-align: center;
     border-left: none;
     background: none !important;        /* Elimina cualquier fondo en el título */
+}
+@media (max-width: 768px) {
+    /* ... otros estilos ... */
+
+    .paso,
+    .paso-reverse {
+        flex-direction: column !important;
+        gap: 1.5rem;
+    }
+    
+    /* La imagen ocupa todo el ancho y altura moderada */
+    .paso-imagen {
+        flex: 0 0 auto;          /* No se estira */
+        width: 100% !important;  /* Ocupa todo el ancho */
+        max-width: 100%;
+        min-width: 0;
+        height: auto;
+    }
+    
+    .paso-imagen img {
+        width: 100%;
+        height: auto;
+        max-height: 50vh;        /* Altura máxima de media pantalla */
+        object-fit: contain;     /* No recorta, muestra toda la imagen */
+    }
+}
+
+@media (max-width: 480px) {
+    /* ... otros estilos ... */
+    
+    .paso-imagen img {
+        max-height: 40vh;        /* Un poco más pequeña en móviles muy pequeños */
+    }
 }
