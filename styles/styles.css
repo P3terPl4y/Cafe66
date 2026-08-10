@@ -1,17 +1,24 @@
 /* ─── VARIABLES CSS ─── */
 :root {
-    --color-primary: #050302;
-    --color-secondary: #1d140a;
-    --color-accent: #b8860b;
-    --color-accent-light: #c5a765;
-    --color-bg-card: rgba(255, 252, 245, 0.75);
-    --color-bg-card-hover: rgba(255, 252, 245, 0.9);
-    --color-border: rgba(197, 167, 101, 0.25);
-    --color-shadow: rgba(0, 0, 0, 0.1);
-    --color-shadow-hover: rgba(0, 0, 0, 0.15);
+    /* ─── COLORES (máximo 4) ─── */
+    --color-primary: #0a0a0a;      /* Negro */
+    --color-secondary: #2a2a2a;    /* Gris oscuro (complementario del negro) */
+    --color-accent: #8b7a3a;       /* Dorado sucio */
+    --color-accent-light: #f5ede4; /* Crema / Marfil (complementario del dorado) */
+    
+    /* ─── DERIVADOS (basados en los 4 colores) ─── */
+    --color-bg-card: rgba(245, 237, 228, 0.85);   /* Crema transparente */
+    --color-bg-card-hover: rgba(245, 237, 228, 1); /* Crema sólido */
+    --color-border: rgba(139, 122, 58, 0.25);      /* Dorado sucio semitransparente */
+    --color-shadow: rgba(0, 0, 0, 0.15);           /* Sombra suave */
+    --color-shadow-hover: rgba(0, 0, 0, 0.25);     /* Sombra más intensa */
+
+    /* ─── TIPOGRAFÍA ─── */
     --font-serif: 'Playfair Display', 'Georgia', serif;
     --font-sans: 'Inter', 'Courier New', monospace;
     --font-cursive: cursive;
+
+    /* ─── ESPACIADO Y BORDES ─── */
     --border-radius-lg: 60px 10px 60px 10px;
     --border-radius-md: 40px 8px 40px 8px;
     --border-radius-sm: 30px 4px 30px 4px;
@@ -19,7 +26,7 @@
     --transition-ease: 0.3s ease;
 }
 
-/* ── RESET Y BASE ── */
+/* ─── RESET Y BASE ─── */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -47,7 +54,7 @@ header {
     justify-content: center;
 }
 
-/* ── TÍTULO PRINCIPAL ── */
+/* ─── TÍTULO PRINCIPAL ─── */
 .hero-title {
     text-align: center;
     margin: 1rem 0 3rem;
@@ -74,10 +81,10 @@ header {
     opacity: 0.8;
 }
 
-/* ─── CARDS (servilleta de papel) ─── */
+/* ─── CARDS ─── */
 .card-wrapper,
 .card-wrapper2 {
-    background: url("../assets/g89.svg") no-repeat ;
+    background: url("../assets/g89.svg") no-repeat;
     background-size: cover;
     border-top: 1% groove var(--color-accent-light);
     border-left: 1% groove var(--color-accent-light);
@@ -109,18 +116,15 @@ header {
     margin-bottom: 1.2rem;
     color: #1a1005;
 }
-
 .card-wrapper2 h3 {
     background: none !important;
     padding: 0;
     border-left: 6px solid var(--color-accent);
     padding-left: 1.2rem;
 }
-.card-wrapper2 p {
-    margin-bottom: 0.5rem;
-}
+.card-wrapper2 p { margin-bottom: 0.5rem; }
 
-/* ── GRID ── */
+/* ─── GRID ─── */
 .grid-2 {
     display: flex;
     align-items: center;
@@ -158,7 +162,7 @@ header {
 }
 .grid-3.visible { opacity: 1; transform: translateX(0); }
 
-/* ── NAVEGACIÓN ── */
+/* ─── NAVEGACIÓN ─── */
 .nav-rustica {
     display: flex;
     align-items: start;
@@ -194,7 +198,7 @@ header {
     color: #7a4a2e;
 }
 
-/* ── CITAS ── */
+/* ─── CITAS ─── */
 .blockquote-madera {
     background-size: cover;
     background-position: center;
@@ -227,7 +231,7 @@ header {
     color: #d4a373;
 }
 
-/* ── PIE DE PÁGINA ── */
+/* ─── PIE DE PÁGINA ─── */
 .footer-rustico {
     margin-top: 4rem;
     padding: 2rem 0;
@@ -278,16 +282,6 @@ header {
     margin-bottom: 0.5rem;
     letter-spacing: 2px;
 }
-/* ─── SECCIÓN HISTORIA (pasos) ─── */
-.historia-container { max-width: 1100px; margin: 0 auto; }
-.historia-titulo {
-    font-family: var(--font-serif);
-    font-size: clamp(2rem, 6vw, 3.5rem);
-    text-align: center;
-    color: var(--color-primary);
-    margin-bottom: 0.5rem;
-    letter-spacing: 2px;
-}
 .paso {
     display: flex;
     flex-wrap: wrap;
@@ -298,10 +292,11 @@ header {
     transform: none !important;
     opacity: 1 !important;
     transition: transform var(--transition-ease);
+   
 }
 .paso:hover { transform: scale(1.01); }
 .paso-reverse { flex-direction: row-reverse; }
-/* ─── PASO: IMAGEN ─── */
+
 .paso-imagen {
     flex: 1 1 300px;
     min-width: 200px;
@@ -311,7 +306,6 @@ header {
     overflow: hidden;
     background: transparent !important;
 }
-
 .paso-imagen img {
     width: 100%;
     height: auto;
@@ -319,19 +313,18 @@ header {
     transition: transform var(--transition-smooth), filter var(--transition-smooth);
     filter: sepia(0.2) contrast(0.95);
 }
-
 .paso:hover .paso-imagen img {
     transform: scale(1.03);
     filter: sepia(0);
 }
-/* ─── TEXTO (mantiene su tamaño) ─── */
+
 .paso-texto {
     flex: 1 1 300px;
     min-width: 200px;
     background: var(--color-bg-card);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border-radius: var(--border-radius-md);
+    border-radius: 0px 8px 8px 8px;
     padding: 2rem;
     border: 1px solid var(--color-border);
     box-shadow: 0 8px 25px var(--color-shadow);
@@ -339,6 +332,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: url("../assets/g89.svg");
+    background-size: cover;
 }
 .paso-texto:hover {
     transform: translateY(-4px);
@@ -378,8 +373,8 @@ header {
     text-align: center;
 }
 .frase-destacada .card-wrapper {
-    background: url("../assets/g89.svg") no-repeat ;
-    background-size: cover;
+    background: white !important;
+    background-image: none !important;
     padding: 2.5rem 3rem;
     border-radius: var(--border-radius-lg);
     border: 2px solid var(--color-accent-light);
@@ -396,6 +391,7 @@ header {
     padding: 0;
     text-align: center;
     border-left: none;
+    background: none !important;
 }
 
 /* ─── COMPONENTE GRID HISTORIA ─── */
@@ -563,6 +559,37 @@ header {
 }
 .seccion-historia.reverse { flex-direction: row-reverse; }
 
+/* ─── CORRECCIÓN: título arriba del texto en card-wrapper2 ─── */
+.seccion-historia .card-wrapper2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 2.2rem;
+}
+.seccion-historia .card-wrapper2 h3 {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    color: var(--color-primary);
+    border-left: 6px solid var(--color-accent);
+    padding-left: 1.2rem;
+    line-height: 1.3;
+    background: none !important;
+    text-align: left;
+}
+.seccion-historia .card-wrapper2 p {
+    width: 100%;
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    line-height: 1.8;
+    color: #3d2b1c;
+    margin: 0.5rem 0 0 0;
+    padding-left: 1.8rem;
+    text-align: left;
+}
+
 /* ─── SECCIÓN DOS IMÁGENES ─── */
 .seccion-dos-imagenes {
     display: flex;
@@ -613,11 +640,18 @@ header {
     .grid-3 { margin-top: 10vh; transform: translateX(0); opacity: 1 !important; }
     .nav-rustica { flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
     .nav-rustica a { font-size: 5vw; width: 45%; }
-    .paso, .paso-reverse { flex-direction: column !important; }
-    .paso-imagen img { height: 200px; }
+    
+    /* Sección historia - pasos */
+    .paso, .paso-reverse { flex-direction: column !important; gap: 1.5rem; }
+    .paso-imagen { flex: 0 0 auto; width: 100% !important; max-width: 100%; min-width: 0; height: auto; }
+    .paso-imagen img { width: 100%; height: auto; max-height: 50vh; object-fit: contain; }
     .paso-texto h3 { font-size: 1.8rem; }
+    
+    /* Frase destacada */
     .frase-destacada .card-wrapper { padding: 1.5rem; }
     .frase-destacada .card-wrapper h3 { font-size: 1.6rem; }
+    
+    /* Grid historia */
     .grid-historia, .grid-historia.reverse { flex-direction: column !important; gap: 1.5rem; margin: 2.5rem 0; }
     .grid-imagen { min-width: 100%; height: 200px; }
     .grid-imagen img { height: 100%; min-height: unset; }
@@ -628,11 +662,15 @@ header {
     .grid-2 img { max-width: 100%; height: auto; }
     .grid-imagen { width: 100%; max-width: 100%; height: auto; }
     .grid-imagen img { max-width: 100%; height: auto; }
+    
+    /* Sección historia (imagen + card) */
     .seccion-historia, .seccion-historia.reverse { flex-direction: column !important; gap: 1.5rem; margin: 2rem auto; padding: 0 1rem; }
     .seccion-historia .imagen-contenedor { flex: 0 1 auto; width: 100%; min-height: 200px; }
     .seccion-historia .imagen-contenedor .imagen-real { max-height: 60vh; }
     .seccion-historia .card-wrapper2 { width: 100%; padding: 1.5rem; }
     .seccion-historia .card-wrapper2 h3 { font-size: 1.6rem; padding-left: 1rem; }
+    
+    /* Sección dos imágenes */
     .seccion-dos-imagenes { flex-direction: column; align-items: center; gap: 1.5rem; margin: 2rem auto; padding: 0 1rem; }
     .seccion-dos-imagenes .imagen-contenedor { flex: 0 1 auto; width: 100%; min-height: unset; }
     .seccion-dos-imagenes .imagen-contenedor .imagen-real { max-height: 60vh; }
@@ -646,105 +684,342 @@ header {
     .card-wrapper h3 { font-size: 1rem; padding: 1.5vh 4vw; }
     .card-wrapper:hover { transform: scale(1.02) !important; }
     .nav-rustica a { font-size: 6vw; width: 100%; text-align: center; }
-    .paso-imagen img { height: 160px; }
+    
+    /* Sección historia - pasos */
+    .paso-imagen img { max-height: 40vh; }
     .paso-texto h3 { font-size: 1.4rem; }
     .paso-texto p { font-size: 0.95rem; }
+    
+    /* Frase destacada */
     .frase-destacada .card-wrapper h3 { font-size: 1.4rem; }
+    
+    /* Grid historia */
     .grid-imagen { height: 160px; }
     .historia-card h3 { font-size: 1.4rem; }
     .historia-card p { font-size: 0.9rem; }
     .grid-2 { padding: 0.2rem; }
+    
+    /* Sección historia (imagen + card) */
     .seccion-historia .imagen-contenedor .imagen-real { max-height: 50vh; }
     .seccion-historia .card-wrapper2 h3 { font-size: 1.4rem; }
+    
+    /* Sección dos imágenes */
     .seccion-dos-imagenes .imagen-contenedor .imagen-real { max-height: 50vh; }
+}/* ─── SECCIÓN DE CONTACTO (mesa servida) ─── */
+.seccion-contacto {
+    margin: 4rem auto;
+    padding: 2rem 1.5rem;
+    max-width: 1200px;
+    width: 100%;
+    background: transparent !important;
+    position: relative;
 }
-/* ─── CORRECCIÓN: título arriba del texto en card-wrapper2 ─── */
-.seccion-historia .card-wrapper2 {
+
+.contacto-mantel {
+    background: rgba(26, 26, 26, 0.65);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: var(--border-radius-lg);
+    padding: 2.5rem 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), inset 0 0 80px rgba(184, 134, 11, 0.05);
+    position: relative;
+    background: url("../assets/Textura\ de\ madera\ negra\ _\ Foto\ Premium.jpeg");
+
+    overflow: hidden;
+}
+
+/* Decoración de borde (flecos de mantel) */
+.contacto-mantel::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+   
+    background-size: cover;
+}
+
+.contacto-mantel::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+   
+
+}
+
+/* Header */
+.contacto-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.contacto-titulo {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #f5ede4;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    letter-spacing: 3px;
+    margin-bottom: 0.3rem;
+}
+
+.contacto-subtitulo {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    color: var(--color-accent);
+        letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+/* Mesa */
+.contacto-mesa {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0 2rem;
+}
+
+/* Plato central */
+.contacto-plato {
+    flex: 1 1 300px;
+    min-width: 220px;
+    background: url("../assets/plato.svg") no-repeat;
+    background-size: auto;
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), inset 0 0 60px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Servilleta dentro del plato */
+.contacto-servilleta {
+   
+    backdrop-filter: blur(2px);
+    border-radius: var(--border-radius-sm);
+    padding: 1.8rem 1.5rem;
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(184, 134, 11, 0.15);
+}
+
+.contacto-servilleta h3 {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    color: #f5ede4;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(184, 134, 11, 0.2);
+    padding-bottom: 0.5rem;
+}
+
+.contacto-servilleta p {
+    color: rgba(245, 237, 228, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.3rem;
+}
+
+/* Decoración de mesa */
+.contacto-decoracion {
+    flex: 0 1 200px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    padding: 2rem 2.2rem;
+    gap: 1.5rem;
+    padding: 1rem 0;
 }
 
-.seccion-historia .card-wrapper2 h3 {
-    margin: 0;                /* Elimina el centrado */
-    max-width: 100%;          /* Ocupa todo el ancho */
-    width: 100%;
-    font-family: var(--font-serif);
-    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-    color: var(--color-primary);
-    border-left: 6px solid var(--color-accent);
-    padding-left: 1.2rem;
-    line-height: 1.3;
-    background: none !important;
-    text-align: left;
+/* Vela */
+.contacto-vela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.seccion-historia .card-wrapper2 p {
-    width: 100%;
-    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
-    line-height: 1.8;
-    color: #3d2b1c;
-    margin: 0.5rem 0 0 0;
-    padding-left: 1.8rem;     /* Alineado con el título (padding-left + borde) */
-    text-align: left;
-}
-.frase-destacada .card-wrapper{
-    background-color: white;
-}/* ─── FRASE DESTACADA: fondo blanco ─── */
-.frase-destacada .card-wrapper {
-    background: white !important;       /* Fondo blanco sólido */
-    background-image: none !important;  /* Elimina la imagen SVG */
-    border: 2px solid var(--color-accent-light);
-    padding: 2.5rem 3rem;
-    border-radius: var(--border-radius-lg);
-    box-shadow: 0 8px 30px var(--color-shadow);
-    display: inline-block;
-    max-width: 700px;
-    width: 100%;
+.vela-cuerpo {
+    width: 20px;
+    height: 50px;
+    border-radius: 4px 4px 2px 2px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
-.frase-destacada .card-wrapper h3 {
-    font-family: var(--font-serif);
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    color: var(--color-primary);
-    font-style: italic;
-    padding: 0;
-    text-align: center;
+.vela-llama {
+    width: 10px;
+    height: 18px;
+    background: radial-gradient(ellipse at bottom, #ffd700, #ff8c00, transparent);
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+    margin-bottom: -5px;
+    animation: flame 0.8s ease-in-out infinite alternate;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+@keyframes flame {
+    0% { transform: scaleY(1) translateY(0); }
+    100% { transform: scaleY(0.8) translateY(-3px); }
+}
+
+/* Taza de café */
+.contacto-taza {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.taza-cuerpo {
+    width: 35px;
+    height: 30px;
+    background: linear-gradient(180deg, #2c2c2c, #1a1a1a);
+    border-radius: 0 0 8px 8px;
+    position: relative;
+}
+
+.taza-cuerpo::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.taza-asita {
+    width: 12px;
+    height: 12px;
+    border-radius: 0 50% 50% 0;
     border-left: none;
-    background: none !important;        /* Elimina cualquier fondo en el título */
+    margin-left: -2px;
 }
-@media (max-width: 768px) {
-    /* ... otros estilos ... */
 
-    .paso,
-    .paso-reverse {
-        flex-direction: column !important;
-        gap: 1.5rem;
-    }
-    
-    /* La imagen ocupa todo el ancho y altura moderada */
-    .paso-imagen {
-        flex: 0 0 auto;          /* No se estira */
-        width: 100% !important;  /* Ocupa todo el ancho */
-        max-width: 100%;
-        min-width: 0;
-        height: auto;
-    }
-    
-    .paso-imagen img {
-        width: 100%;
-        height: auto;
-        max-height: 50vh;        /* Altura máxima de media pantalla */
-        object-fit: contain;     /* No recorta, muestra toda la imagen */
-    }
+.taza-vapor {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.taza-vapor::before,
+.taza-vapor::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 10px;
+    border-radius: 50%;
+    animation: vapor 2s ease-in-out infinite;
+}
+
+.taza-vapor::before {
+    left: 2px;
+    animation-delay: 0.2s;
+}
+
+.taza-vapor::after {
+    left: 10px;
+    animation-delay: 0.8s;
+}
+
+@keyframes vapor {
+    0% { transform: translateY(0) scale(0.8); opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { transform: translateY(-20px) scale(1.2); opacity: 0; }
+}
+
+/* Servilleta decorativa (doblada) */
+.contacto-servilleta-deco {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #f5ede4 40%, #d4a373 100%);
+    border-radius: 4px;
+    transform: rotate(45deg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(184, 134, 11, 0.15);
+    position: relative;
+}
+
+.contacto-servilleta-deco::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border: 1px solid rgba(184, 134, 11, 0.1);
+    border-radius: 2px;
+}
+
+/* Horario */
+.contacto-horario {
+    flex: 1 1 200px;
+    min-width: 160px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: var(--border-radius-md);
+    padding: 1.8rem 1.5rem;
+    border: 1px solid rgba(184, 134, 11, 0.15);
+    text-align: center;
+    align-self: center;
+}
+
+.contacto-horario h4 {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    color: #f5ede4;
+    margin-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(184, 134, 11, 0.15);
+    padding-bottom: 0.5rem;
+}
+
+.contacto-horario p {
+    color: rgba(245, 237, 228, 0.75);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.2rem;
+}
+
+/* Footer de la mesa */
+.contacto-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(184, 134, 11, 0.1);
+}
+
+.contacto-detalle {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    color: rgba(212, 163, 115, 0.4);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+    .seccion-contacto { padding: 1rem; margin: 2rem auto; }
+    .contacto-mantel { padding: 1.5rem 1rem; }
+    .contacto-plato { width: 200px; height: 200px; }
+    .contacto-servilleta h3 { font-size: 1.2rem; }
+    .contacto-decoracion { flex-direction: row; flex-wrap: wrap; gap: 1rem; }
+    .contacto-horario { min-width: 100%; }
 }
 
 @media (max-width: 480px) {
-    /* ... otros estilos ... */
-    
-    .paso-imagen img {
-        max-height: 40vh;        /* Un poco más pequeña en móviles muy pequeños */
-    }
+    .contacto-plato { width: 160px; height: 160px; padding: 0.8rem; }
+    .contacto-servilleta h3 { font-size: 1rem; }
+    .contacto-servilleta p { font-size: 0.8rem; }
+    .vela-cuerpo { height: 35px; }
+    .contacto-titulo { font-size: 1.8rem; }
 }
